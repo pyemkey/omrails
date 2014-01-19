@@ -1,5 +1,5 @@
 Omrails::Application.routes.draw do
-  root to: "pages#home"
+  root to: "pins#index"
   resources :pins
   devise_for :users
   get 'about' => "pages#about"
