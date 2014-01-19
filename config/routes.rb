@@ -1,14 +1,10 @@
 Omrails::Application.routes.draw do
-  resources :pins
-
-  devise_for :users
-
   root to: "pages#home"
+  resources :pins
+  devise_for :users
   get 'about' => "pages#about"
   
-  devise_for :users do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
