@@ -1,6 +1,7 @@
 <%= simple_form_for(@pin) do |f| %>
   <%= f.error_notification %>
-
+	
+	<%= f.input :image, as: :file, label: "Upload an image" %>
   <%= f.input :description, as: :text, input_html: { rows: "3" } %>
 
   <div class="form-actions">
