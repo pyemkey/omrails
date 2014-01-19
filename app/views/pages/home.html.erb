@@ -1,5 +1,15 @@
 <% if user_signed_in? %>
 	<h1>You're logged in</h1>
+
+	<div id="pinter">
+		<% @pins.each do |pin| %>	
+			<div class="item">
+				<%= image_tag pin.image(:medium) %>
+				<p><%= pin.description %></p>
+				<p>Posted by <%= @user.name %></p>
+			</div>
+		<% end %>
+	</div>
 <% else %>
 	<div class="jumbotron">
 		<h1>Welcome to One Month Rails!</h1>
